@@ -1,4 +1,5 @@
 import React from 'react';
+import heroImage from '../assets/images/hero-image.jpg';
 
 // Define the types for props
 interface HeroSectionProps {
@@ -11,7 +12,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ title, subtitle, date }) => {
   return (
     <section id="hero" className="relative text-center text-white">
       <img 
-        src="/images/hero-image.jpg" 
+        src={heroImage} 
         alt="Wedding" 
         className="w-full h-screen object-cover"
       />
