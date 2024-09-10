@@ -13,10 +13,13 @@ const center = {
   lng: 100.5018, // Example: Longitude of Bangkok, Thailand
 };
 
+
 // Get the Google Maps API key from environment variables
 const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
 const GoogleMapComponent: React.FC = () => {
+    console.log('check api key : ' + process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
+    
   return (
     <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY || ''}>
       <GoogleMap

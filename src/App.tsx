@@ -12,7 +12,7 @@ export default function App() {
     <Countdown />
     <div className="py-12">
       <h2 className="text-3xl font-semibold text-center mb-6">Wedding Location</h2>
-      {/* <GoogleMapComponent /> */}
+      <GoogleMapComponent />
     </div>
   </>;
 }
