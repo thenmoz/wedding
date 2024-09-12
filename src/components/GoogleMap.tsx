@@ -8,27 +8,35 @@ const containerStyle = {
 };
 
 // Define the center of the map (wedding location)
+// 14.546680348790936, 101.5655321548121
 const center = {
-  lat: 13.7563,  // Example: Latitude of Bangkok, Thailand
-  lng: 100.5018, // Example: Longitude of Bangkok, Thailand
+  lat: 14.546680348790936,  // Example: Latitude of Bangkok, Thailand
+  lng: 101.5655321548121, // Example: Longitude of Bangkok, Thailand
 };
 
 
 // Get the Google Maps API key from environment variables
-const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
 const GoogleMapComponent: React.FC = () => {
-    console.log('check api key : ' + process.env.REACT_APP_GOOGLE_MAPS_API_KEY);
+
+  const openGoogleMapsNavigation = () => {
+    const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${center.lat},${center.lng}`;
+    window.open(googleMapsUrl, '_blank');
+  };
     
   return (
     <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY || ''}>
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={15} // Zoom level
+        zoom={15}
       >
         {/* Marker for the wedding location */}
-        <Marker position={center} />
+        <Marker 
+          position={center}
+          onClick={openGoogleMapsNavigation}  // Bind click event to marker
+        />
       </GoogleMap>
     </LoadScript>
   );
