@@ -40,14 +40,9 @@ const Countdown: React.FC = () => {
       };
     }
   
-    // Ensure all time values are two-digit strings
-    timeLeft.days = String(timeLeft.days).padStart(2, '0');
-    timeLeft.hours = String(timeLeft.hours).padStart(2, '0');
-    timeLeft.minutes = String(timeLeft.minutes).padStart(2, '0');
-    timeLeft.seconds = String(timeLeft.seconds).padStart(2, '0');
-  
     return timeLeft;
   }
+  
   
 
   return (
@@ -56,25 +51,25 @@ const Countdown: React.FC = () => {
       {timeLeft.days !== undefined ? (
         <div className="flex justify-center space-x-2"> {/* Reduced space */}
           <div className="text-center content-center w-10 h-10 bg-[#FFD0D0]">
-            <span className="text-16 font-libreCaslon">{timeLeft.days}</span>
+            <span className="text-16 font-libreCaslon">{String(timeLeft.days).padStart(2, '0')}</span>
           </div>
           <div className="text-center content-center">
             <span className="text-16 font-libreCaslon">:</span>
           </div>
           <div className="text-center content-center w-10 h-10 bg-[#FFD0D0]">
-            <span className="text-16 font-libreCaslon">{timeLeft.hours}</span>
+            <span className="text-16 font-libreCaslon">{String(timeLeft.hours).padStart(2, '0')}</span>
           </div>
           <div className="text-center content-center">
             <span className="text-16 font-libreCaslon">:</span>
           </div>
           <div className="text-center content-center w-10 h-10 bg-[#FFD0D0]">
-            <span className="text-16 font-libreCaslon">{timeLeft.minutes}</span>
+            <span className="text-16 font-libreCaslon">{String(timeLeft.minutes).padStart(2, '0')}</span>
           </div>
           <div className="text-center content-center">
             <span className="text-16 font-libreCaslon">:</span>
           </div>
           <div className="text-center content-center w-10 h-10 bg-[#FFD0D0]">
-            <span className="text-16 font-libreCaslon">{timeLeft.seconds}</span>
+            <span className="text-16 font-libreCaslon">{String(timeLeft.seconds).padStart(2, '0')}</span>
           </div>
         </div>
       ) : (
