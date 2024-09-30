@@ -23,23 +23,50 @@ const Timeline: React.FC = () => {
         Wedding Reception Timeline Schedule
       </h2>
 
-      <div className="relative border-l-2 border-gray-300 pl-4 sm:pl-8">
+      <div className="relative border-l-2 border-gray-300">
         {events.map((event, index) => (
-          <div className="mb-10 flex flex-col sm:flex-row items-center sm:items-center relative" key={index}>
-            {/* Time */}
-            <div className="mb-2 sm:mb-0 sm:absolute left-[-110px] sm:w-28 text-gray-800 font-semibold text-sm sm:text-base flex items-center justify-center">
-              {event.time}
-            </div>
+          <div
+            className={`mb-10 flex flex-col sm:flex-row items-center sm:items-center relative ${
+              index % 2 === 0 ? 'justify-start' : 'justify-end'
+            }`}
+            key={index}
+          >
+            {/* Left Side (Time & Icon for even-indexed events) */}
+            {index % 2 === 0 ? (
+              <>
+                {/* Time */}
+                <div className="mb-2 sm:mb-0 sm:w-32 sm:text-right text-gray-800 font-semibold text-sm sm:text-base">
+                  {event.time}
+                </div>
 
-            {/* Icon */}
-            <div className="flex items-center justify-center bg-[#A28D69] text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0">
-              <FontAwesomeIcon icon={event.icon} size="lg" />
-            </div>
+                {/* Icon */}
+                <div className="flex items-center justify-center bg-[#A28D69] text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 mx-4">
+                  <FontAwesomeIcon icon={event.icon} size="lg" />
+                </div>
 
-            {/* Event Description */}
-            <div className="ml-0 sm:ml-6 mt-2 sm:mt-0 text-gray-800 text-sm sm:text-lg text-left flex items-center">
-              <p>{event.label}</p>
-            </div>
+                {/* Event Description */}
+                <div className="ml-0 sm:ml-6 text-gray-800 text-sm sm:text-lg text-left">
+                  <p>{event.label}</p>
+                </div>
+              </>
+            ) : (
+              <>
+                {/* Event Description for odd-indexed events */}
+                <div className="mr-6 text-gray-800 text-sm sm:text-lg text-right">
+                  <p>{event.label}</p>
+                </div>
+
+                {/* Icon */}
+                <div className="flex items-center justify-center bg-[#A28D69] text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 mx-4">
+                  <FontAwesomeIcon icon={event.icon} size="lg" />
+                </div>
+
+                {/* Time */}
+                <div className="mb-2 sm:mb-0 sm:w-32 text-gray-800 font-semibold text-sm sm:text-base">
+                  {event.time}
+                </div>
+              </>
+            )}
           </div>
         ))}
       </div>
