@@ -9,7 +9,7 @@ interface TimeLeft {
 }
 
 const Countdown: React.FC = () => {
-  const weddingDate = new Date('2024-11-30T16:00:00'); // Set your wedding date here
+  const weddingDate = new Date('2024-11-30T17:00:00'); // Set your wedding date here
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
 
   useEffect(() => {
@@ -39,30 +39,27 @@ const Countdown: React.FC = () => {
   }
 
   return (
-    <div className="text-center py-12 bg-gray-100">
-      <h2 className="text-3xl font-semibold mb-8">Countdown to Our Wedding</h2>
+    <div className="text-center bg-gray-100 py-1">
+      <h2 className="text-16 font-libreCaslon my-2">We Are Waiting For....</h2>
       {timeLeft.days !== undefined ? (
         <div className="flex justify-center space-x-8">
-          <div className="text-center">
-            <span className="block text-5xl font-bold">{timeLeft.days}</span>
-            <span className="block text-lg font-medium">Days</span>
+          <div className="text-center content-center w-10 h-10 bg-[#FFD0D0]">
+            <span className="text-16 font-libreCaslon  ">{timeLeft.days}</span>
           </div>
-          <div className="text-center">
-            <span className="block text-5xl font-bold">{timeLeft.hours}</span>
-            <span className="block text-lg font-medium">Hours</span>
+          <div className="text-center content-center w-10 h-10 bg-[#FFD0D0]">
+            <span className="text-16 font-libreCaslon  ">{timeLeft.hours}</span>
           </div>
-          <div className="text-center">
-            <span className="block text-5xl font-bold">{timeLeft.minutes}</span>
-            <span className="block text-lg font-medium">Minutes</span>
+          <div className="text-center content-center w-10 h-10 bg-[#FFD0D0]">
+            <span className="text-16 font-libreCaslon  ">{timeLeft.minutes}</span>
           </div>
-          <div className="text-center">
-            <span className="block text-5xl font-bold">{timeLeft.seconds}</span>
-            <span className="block text-lg font-medium">Seconds</span>
+          <div className="text-center content-center w-10 h-10 bg-[#FFD0D0]">
+            <span className="text-16 font-libreCaslon  ">{timeLeft.seconds}</span>
           </div>
         </div>
       ) : (
         <h3 className="text-xl font-semibold">We're Married!</h3>
       )}
+      <h2 className="text-16 font-libreCaslon my-2">Unit The Big Day!</h2>
     </div>
   );
 };

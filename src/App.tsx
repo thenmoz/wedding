@@ -12,8 +12,8 @@ const App: React.FC = () => {
     <>
       <Header />
       <Carousel />
-      <WeddingInfo />
       <Countdown />
+      <WeddingInfo />
       <Timeline />
       <div className="py-12">
         <h2 className="text-3xl font-semibold text-center mb-6">Wedding Location</h2>
