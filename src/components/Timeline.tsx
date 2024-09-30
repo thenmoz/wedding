@@ -3,75 +3,49 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRing, faUtensils, faChurch, faCake, faChampagneGlasses } from '@fortawesome/free-solid-svg-icons';
 
 interface Event {
-  time: string;
-  label: string;
-  icon: typeof faRing; // Specify the type of the FontAwesome icon
+    time: string;
+    label: string;
+    icon: typeof faRing; // Specify the type of the FontAwesome icon
 }
 
 const Timeline: React.FC = () => {
-  const events: Event[] = [
-    { time: "3:00 PM", label: `"Do You & I Do"`, icon: faRing },
-    { time: "4:00 PM", label: "Raise Your Glass", icon: faChurch },
-    { time: "6:00 PM", label: "Dinner Time", icon: faUtensils },
-    { time: "8:00 PM", label: "Party Time!", icon: faCake },
-    { time: "3:00 PM", label: "After Party Send Off!", icon: faChampagneGlasses }
-  ];
+    const events: Event[] = [
+        { time: "17:30", label: "เปิดตัวคู่บ่าวสาว", icon: faRing },
+        { time: "18:00", label: "ตัดเค้ก", icon: faChurch },
+        { time: "19:00", label: "กล่าวอวยพร", icon: faUtensils },
+        { time: "19:30", label: "โยนดอกไม้", icon: faCake },
+        { time: "20:20", label: "After Party Send Off!", icon: faChampagneGlasses }
+    ];
 
-  return (
-    <div className="w-full md:w-2/3 mx-auto my-8">
-      <h2 className="text-center text-2xl font-semibold text-[#A28D69] mb-10">
-        Wedding Reception Timeline Schedule
-      </h2>
+    return (
+        <div className="w-full mx-auto bg-[#E3CAA5]">
+            <p className="text-center font-libreCaslon font-semibold text-16 text-[#6C4E31] underline underline-offset-8 pt-10">
+                TIMING OF THE DAY
+            </p>
 
-      <div className="relative border-l-2 border-gray-300">
-        {events.map((event, index) => (
-          <div
-            className={`mb-10 flex flex-col sm:flex-row items-center sm:items-center relative ${
-              index % 2 === 0 ? 'justify-start' : 'justify-end'
-            }`}
-            key={index}
-          >
-            {/* Left Side (Time & Icon for even-indexed events) */}
-            {index % 2 === 0 ? (
-              <>
-                {/* Time */}
-                <div className="mb-2 sm:mb-0 sm:w-32 sm:text-right text-gray-800 font-semibold text-sm sm:text-base">
-                  {event.time}
-                </div>
+            {events.map((event, index) => (
+                <div className='flex justify-center'>
+                    <div className="w-2/3 mb-10 flex flex-row items-center relative" key={index}>
+                        {/* Time */}
+                        <div className="w-1/3">
+                            <p className="text-[#AD8B73] font-libreCaslon text-20">{event.time}</p>
+                        </div>
 
-                {/* Icon */}
-                <div className="flex items-center justify-center bg-[#A28D69] text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 mx-4">
-                  <FontAwesomeIcon icon={event.icon} size="lg" />
-                </div>
+                        {/* Icon */}
+                        <div className='w-1/3'>
+                            <div className="border-t border-[#AD8B73] w-10"></div>
+                        </div>
 
-                {/* Event Description */}
-                <div className="ml-0 sm:ml-6 text-gray-800 text-sm sm:text-lg text-left">
-                  <p>{event.label}</p>
+                        {/* Event Description */}
+                        <div className="w-2/3">
+                            <p className="text-[#AD8B73] font-libreCaslon text-16">{event.label}</p>
+                        </div>
+                    </div>
                 </div>
-              </>
-            ) : (
-              <>
-                {/* Event Description for odd-indexed events */}
-                <div className="mr-6 text-gray-800 text-sm sm:text-lg text-right">
-                  <p>{event.label}</p>
-                </div>
+            ))}
+        </div>
 
-                {/* Icon */}
-                <div className="flex items-center justify-center bg-[#A28D69] text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 mx-4">
-                  <FontAwesomeIcon icon={event.icon} size="lg" />
-                </div>
-
-                {/* Time */}
-                <div className="mb-2 sm:mb-0 sm:w-32 text-gray-800 font-semibold text-sm sm:text-base">
-                  {event.time}
-                </div>
-              </>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Timeline;

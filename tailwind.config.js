@@ -13,8 +13,8 @@ export default {
         normal: 400,
       },
       fontFamily: {
-        libreCaslon: ['"Libre Caslon Display"', 'serif'],
-        lustria: ['"Lustria"', 'serif'],
+        libreCaslon: ['"Libre Caslon Display"', 'Kanit'],
+        lustria: ['"Lustria"', 'Kanit'],
       },
     },
   },

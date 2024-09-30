@@ -24,21 +24,26 @@ const GoogleMapComponent: React.FC = () => {
     const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${center.lat},${center.lng}`;
     window.open(googleMapsUrl, '_blank');
   };
-    
+
   return (
-    <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY || ''}>
-      <GoogleMap
-        mapContainerStyle={containerStyle}
-        center={center}
-        zoom={15}
-      >
-        {/* Marker for the wedding location */}
-        <Marker 
-          position={center}
-          onClick={openGoogleMapsNavigation}  // Bind click event to marker
-        />
-      </GoogleMap>
-    </LoadScript>
+    <div className="w-full mx-auto bg-[#E3CAA5]">
+      <p className="text-center font-libreCaslon font-semibold text-16 text-[#6C4E31] mb-10 underline underline-offset-8">
+        Location
+      </p>
+      <LoadScript googleMapsApiKey={GOOGLE_MAPS_API_KEY || ''}>
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={15}
+        >
+          {/* Marker for the wedding location */}
+          <Marker
+            position={center}
+            onClick={openGoogleMapsNavigation}  // Bind click event to marker
+          />
+        </GoogleMap>
+      </LoadScript>
+    </div>
   );
 };
 

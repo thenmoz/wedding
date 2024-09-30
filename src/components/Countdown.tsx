@@ -46,7 +46,7 @@ const Countdown: React.FC = () => {
   
 
   return (
-    <div className="text-center bg-gray-100 py-1">
+    <div className="text-center bg-white py-1">
       <h2 className="text-16 font-libreCaslon my-2">We Are Waiting For....</h2>
       {timeLeft.days !== undefined ? (
         <div className="flex justify-center space-x-2"> {/* Reduced space */}
