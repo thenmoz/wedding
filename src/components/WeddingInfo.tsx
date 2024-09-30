@@ -2,7 +2,7 @@ import React from 'react';
 import WeddingInfo1 from "../assets/images/wedding-info-1.png";
 import WeddingInfo2 from "../assets/images/wedding-info-2.png";
 
-const WeddingInfo = () => {
+const WeddingInfo: React.FC = () => {
   return (
     <div className="bg-[#E3CAA5] p-8 flex items-center justify-center">
       {/* Left Side - Large Image */}
