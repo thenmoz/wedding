@@ -16,7 +16,7 @@ const Timeline: React.FC = () => {
 
     return (
         <div className="w-full mx-auto bg-[#E3CAA5]">
-            <p className="text-center font-libreCaslon font-semibold text-16 text-[#6C4E31] underline underline-offset-8 pt-10">
+            <p className="text-center font-libreCaslon font-semibold text-16 text-[#6C4E31] underline underline-offset-8 pt-10 pb-10">
                 TIMING OF THE DAY
             </p>
 
