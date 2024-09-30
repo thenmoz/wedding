@@ -6,7 +6,8 @@ export default {
       fontSize: {
         '20': '20px',
         '16': '16px',
-        '14': '14px'
+        '14': '14px',
+        '13': '13px'
       },
       fontWeight: {
         normal: 400,

@@ -27,7 +27,7 @@ const WeddingInfo: React.FC = () => {
 
         {/* Theme Section */}
         <div className="text-center">
-          <p className="text-13 font-semibold font-libreCaslon text-[#705538]">DRESS CODE</p>
+          <p className="text-13 font-semibold font-libreCaslon text-[#705538] mb-2">DRESS CODE</p>
           <div className="flex justify-center relative">
             <div className="w-7 h-7 bg-[#FFD0D0] rounded-full -mr-2 z-50"></div>
             <div className="w-7 h-7 bg-[#F6B5B5] rounded-full -mr-2 z-40"></div>
