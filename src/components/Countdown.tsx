@@ -46,11 +46,20 @@ const Countdown: React.FC = () => {
           <div className="text-center content-center w-10 h-10 bg-[#FFD0D0]">
             <span className="text-16 font-libreCaslon  ">{timeLeft.days}</span>
           </div>
+          <div className="text-center content-center">
+            <span className="text-16 font-libreCaslon">:</span>
+          </div>
           <div className="text-center content-center w-10 h-10 bg-[#FFD0D0]">
             <span className="text-16 font-libreCaslon  ">{timeLeft.hours}</span>
           </div>
+          <div className="text-center content-center">
+            <span className="text-16 font-libreCaslon">:</span>
+          </div>
           <div className="text-center content-center w-10 h-10 bg-[#FFD0D0]">
             <span className="text-16 font-libreCaslon  ">{timeLeft.minutes}</span>
+          </div>
+          <div className="text-center content-center">
+            <span className="text-16 font-libreCaslon">:</span>
           </div>
           <div className="text-center content-center w-10 h-10 bg-[#FFD0D0]">
             <span className="text-16 font-libreCaslon  ">{timeLeft.seconds}</span>
