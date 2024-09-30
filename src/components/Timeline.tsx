@@ -1,20 +1,17 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRing, faUtensils, faChurch, faCake, faChampagneGlasses } from '@fortawesome/free-solid-svg-icons';
 
 interface Event {
     time: string;
     label: string;
-    icon: typeof faRing; // Specify the type of the FontAwesome icon
 }
 
 const Timeline: React.FC = () => {
     const events: Event[] = [
-        { time: "17:30", label: "เปิดตัวคู่บ่าวสาว", icon: faRing },
-        { time: "18:00", label: "ตัดเค้ก", icon: faChurch },
-        { time: "19:00", label: "กล่าวอวยพร", icon: faUtensils },
-        { time: "19:30", label: "โยนดอกไม้", icon: faCake },
-        { time: "20:20", label: "After Party Send Off!", icon: faChampagneGlasses }
+        { time: "17:30", label: "เปิดตัวคู่บ่าวสาว" },
+        { time: "18:00", label: "ตัดเค้ก" },
+        { time: "19:00", label: "กล่าวอวยพร" },
+        { time: "19:30", label: "โยนดอกไม้" },
+        { time: "20:20", label: "After Party Send Off!" }
     ];
 
     return (
