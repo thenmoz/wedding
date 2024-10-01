@@ -1,5 +1,7 @@
 import React from 'react';
-
+import FlowerLeft from '../assets/images/timeline-left-flower.png'
+import FlowerRightSt from '../assets/images/timeline-right-flower-1.png'
+import FlowerRightNd from '../assets/images/timeline-right-flower-2.png'
 interface Event {
     time: string;
     label: string;
@@ -11,35 +13,43 @@ const Timeline: React.FC = () => {
         { time: "18:00", label: "ตัดเค้ก" },
         { time: "19:00", label: "กล่าวอวยพร" },
         { time: "19:30", label: "โยนดอกไม้" },
-        { time: "20:20", label: "After Party Send Off!" }
+        { time: "20:20", label: "After Party!" }
     ];
 
     return (
-        <div className="w-full mx-auto bg-[#E3CAA5]">
-            <p className="text-center font-libreCaslon font-semibold text-16 text-[#6C4E31] underline underline-offset-8 pt-10 pb-10">
-                TIMING OF THE DAY
+        <div className="w-full mx-auto bg-[#6C4E31] relative">
+            <div className="absolute bottom-0 left-0">
+              <img src={FlowerLeft} className='max-h-36 opacity-35'/>
+            </div>
+            <div className="absolute bottom-0 right-0">
+              <img src={FlowerRightSt} className='max-h-36 opacity-35'/>
+            </div>
+            <div className="absolute bottom-0 right-0">
+              <img src={FlowerRightNd} className='max-h-36'/>
+            </div>
+
+            <p className="text-[#E3CAA5] font-libreBodoni px-4 py-4 text-20 tracking-wider">TIMING OF 
+              <br /> 
+              <span className='inline-block ml-16'>THE DAY</span>
             </p>
 
-            {events.map((event, index) => (
-                <div className='flex justify-center'>
-                    <div className="w-2/3 mb-10 flex flex-row items-center relative" key={index}>
-                        {/* Time */}
-                        <div className="w-1/3">
-                            <p className="text-[#AD8B73] font-libreCaslon text-20">{event.time}</p>
-                        </div>
+            <div className="flex flex-col items-center">
+              {events.map((event, index) => (
+                <div className='flex w-full justify-center mb-6' key={index}>
+                  <div className="w-1/3 text-right pr-4">
+                    <p className="text-[#AD8B73] font-libreCaslon text-2xl">{event.time}</p>
+                  </div>
 
-                        {/* Icon */}
-                        <div className='w-1/3'>
-                            <div className="border-t border-[#AD8B73] w-10"></div>
-                        </div>
+                  <div className='w-8 flex justify-center items-center'>
+                    <div className="border-t border-[#AD8B73] w-full"></div>
+                  </div>
 
-                        {/* Event Description */}
-                        <div className="w-2/3">
-                            <p className="text-[#AD8B73] font-libreCaslon text-16">{event.label}</p>
-                        </div>
-                    </div>
+                  <div className="w-1/2 pl-4">
+                    <p className="text-[#AD8B73] font-libreCaslon text-xl">{event.label}</p>
+                  </div>
                 </div>
-            ))}
+              ))}
+            </div>
         </div>
 
     );

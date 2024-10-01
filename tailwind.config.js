@@ -15,6 +15,7 @@ export default {
       fontFamily: {
         libreCaslon: ['"Libre Caslon Display"', 'Kanit'],
         lustria: ['"Lustria"', 'Kanit'],
+        libreBodoni: ['"Libre Bodoni"', 'Kanit'],
       },
     },
   },

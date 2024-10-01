@@ -32,7 +32,7 @@ const WeddingInfo: React.FC = () => {
           <p className="text-20 md:text-20 font-lustria text-[#6C4E31]">30 . 11 . 2024</p>
           <p className="text-14 font-libreCaslon text-[#6C4E31]">at Kensington English Garden</p>
           <p className="text-14 font-libreCaslon text-[#6C4E31]">Resort Khaoyai</p>
-          <p className="text-14 font-libreCaslon text-[#6C4E31]"> 17:30 o'clock.</p>
+          <p className="text-14 font-libreCaslon text-[#6C4E31] mt-6"> 17:30 o'clock</p>
         </div>
 
         {/* Theme Section */}
