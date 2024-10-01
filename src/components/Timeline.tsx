@@ -35,17 +35,17 @@ const Timeline: React.FC = () => {
 
             <div className="flex flex-col items-center">
               {events.map((event, index) => (
-                <div className='flex w-full justify-center mb-6' key={index}>
+                <div className='flex w-full justify-center mb-4' key={index}>
                   <div className="w-1/3 text-right pr-4">
-                    <p className="text-[#AD8B73] font-libreCaslon text-2xl">{event.time}</p>
+                    <p className="text-[#E3CAA5] font-libreCaslon text-14">{event.time}</p>
                   </div>
 
                   <div className='w-8 flex justify-center items-center'>
-                    <div className="border-t border-[#AD8B73] w-full"></div>
+                    <div className="border-t border-[#E3CAA5] w-full"></div>
                   </div>
 
                   <div className="w-1/2 pl-4">
-                    <p className="text-[#AD8B73] font-libreCaslon text-xl">{event.label}</p>
+                    <p className="text-[#E3CAA5] font-libreCaslon font-extralight text-14">{event.label}</p>
                   </div>
                 </div>
               ))}
