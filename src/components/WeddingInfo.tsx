@@ -1,12 +1,10 @@
 import React from 'react';
 import WeddingInfo1 from "../assets/images/wedding-info-1.png";
-import FlowerLeft from "../assets/images/flower-left.png";
-import FlowerRight from "../assets/images/flower-right.png";
+import Flower from "../assets/images/wedding-info-flower.png";
 
 const WeddingInfo: React.FC = () => {
   return (
     <div className="bg-[#E3CAA5] flex items-center justify-center">
-      {/* Left Side - Large Image */}
       <div className="w-1/2 p-6 flex justify-center">
         <img
           src={WeddingInfo1}
@@ -16,13 +14,25 @@ const WeddingInfo: React.FC = () => {
       </div>
 
       {/* Right Side - Text and Images Section */}
-      <div className="w-1/2 mt-6">
+      <div className="w-1/2 p-10 relative mr-4">
+        <div className="absolute top-0 left-0 scale-x-[-1]">
+          <img src={Flower} className='w-12' />
+        </div>
+        <div className="absolute top-0 right-0">
+          <img src={Flower} className='w-12' />
+        </div>
+        <div className="absolute bottom-0 left-0 rotate-180">
+          <img src={Flower} className='w-12' />
+        </div>
+        <div className="absolute bottom-0 right-0 scale-x-[-1] rotate-180">
+          <img src={Flower} className='w-12' />
+        </div>
         {/* Top Section with Date, Venue, and Time */}
         <div className="text-center mb-8">
           <p className="text-20 md:text-20 font-lustria text-[#6C4E31]">30 . 11 . 2024</p>
           <p className="text-14 font-libreCaslon text-[#6C4E31]">at Kensington English Garden</p>
           <p className="text-14 font-libreCaslon text-[#6C4E31]">Resort Khaoyai</p>
-          <p className="text-14 font-libreCaslon text-[#6C4E31] mt-6">เวลา 17:30 น.</p>
+          <p className="text-14 font-libreCaslon text-[#6C4E31]"> 17:30 o'clock.</p>
         </div>
 
         {/* Theme Section */}
@@ -34,18 +44,6 @@ const WeddingInfo: React.FC = () => {
             <div className="w-7 h-7 bg-[#FFDBB5] rounded-full -mr-2 z-30"></div>
             <div className="w-7 h-7 bg-[#CEAB93] rounded-full -mr-2 z-20"></div>
             <div className="w-7 h-7 bg-[#AD8B73] rounded-full "></div>
-          </div>
-        </div>
-        <div className="w-full">
-          <div className='flex justify-between'>
-            <img
-              src={FlowerLeft}
-              className='object-cover h-auto'
-            />
-            <img
-              src={FlowerRight}
-              className='object-cover h-auto'
-            />
           </div>
         </div>
       </div>
