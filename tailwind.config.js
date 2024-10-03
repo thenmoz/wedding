@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       fontSize: {
+        '32': '32px',
         '20': '20px',
         '16': '16px',
         '14': '14px',
