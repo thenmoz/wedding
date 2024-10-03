@@ -4,17 +4,17 @@ import Flower from "../assets/images/wedding-info-flower.png";
 
 const WeddingInfo: React.FC = () => {
   return (
-    <div className="bg-[#E3CAA5] flex items-center justify-center">
-      <div className="w-1/2 p-6 flex justify-center">
+    <div className="bg-[#E3CAA5] flex items-center justify-center max-h-96 py-4">
+      <div className="w-full mx-1 flex justify-center">
         <img
           src={WeddingInfo1}
           alt="Wedding Couple"
-          className="w-full md:w-3/4 lg:w-1/2 object-cover h-auto"
+          className="w-auto object-cover"
         />
       </div>
 
       {/* Right Side - Text and Images Section */}
-      <div className="w-1/2 p-10 relative mr-4">
+      <div className="w-full p-10 relative mr-1">
         <div className="absolute top-0 left-0 scale-x-[-1]">
           <img src={Flower} className='w-12' />
         </div>
