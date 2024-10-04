@@ -19,13 +19,13 @@ const Timeline: React.FC = () => {
     return (
         <div className="w-full mx-auto bg-[#6C4E31] relative">
             <div className="absolute bottom-0 left-0">
-                <img src={FlowerLeft} className="max-h-36 opacity-35" />
+                <img src={FlowerLeft} className="max-h-24 sm:max-h-56 opacity-35" />
             </div>
             <div className="absolute bottom-0 right-0">
-                <img src={FlowerRightSt} className="max-h-36 opacity-35" />
+                <img src={FlowerRightSt} className="max-h-24 sm:max-h-56 opacity-35" />
             </div>
             <div className="absolute bottom-0 right-0">
-                <img src={FlowerRightNd} className="max-h-36" />
+                <img src={FlowerRightNd} className="max-h-24 sm:max-h-56" />
             </div>
 
             <p className="text-[#E3CAA5] font-libreBodoni px-4 py-4 text-20 sm:text-32 tracking-wider">
