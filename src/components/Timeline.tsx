@@ -28,7 +28,7 @@ const Timeline: React.FC = () => {
                 <img src={FlowerRightNd} className="max-h-36" />
             </div>
 
-            <p className="text-[#E3CAA5] font-libreBodoni px-4 py-4 text-20 tracking-wider">
+            <p className="text-[#E3CAA5] font-libreBodoni px-4 py-4 text-20 sm:text-32 tracking-wider">
                 TIMING OF
                 <br />
                 <span className="inline-block ml-16">THE DAY</span>
@@ -41,7 +41,7 @@ const Timeline: React.FC = () => {
                         key={index}
                     >
                         <div className="w-1/3 text-right pr-4">
-                            <p className="text-[#E3CAA5] font-libreCaslon text-14">
+                            <p className="text-[#E3CAA5] font-libreCaslon text-14 sm:text-20">
                                 {event.time}
                             </p>
                         </div>
@@ -51,7 +51,7 @@ const Timeline: React.FC = () => {
                         </div>
 
                         <div className="w-1/2 pl-4">
-                            <p className="text-[#E3CAA5] font-libreCaslon font-extralight text-14">
+                            <p className="text-[#E3CAA5] font-libreCaslon font-extralight text-14 sm:text-20">
                                 {event.label}
                             </p>
                         </div>
