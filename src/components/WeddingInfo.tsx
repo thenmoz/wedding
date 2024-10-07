@@ -4,7 +4,7 @@ import Flower from "../assets/images/wedding-info-flower.png";
 
 const WeddingInfo: React.FC = () => {
     return (
-        <div className="bg-[#E3CAA5] flex items-center justify-center py-4">
+        <div className="bg-[#E3CAA5] flex items-center justify-center py-4 ">
             <div className="w-full mx-1 flex justify-center">
                 <img
                     src={WeddingInfo1}

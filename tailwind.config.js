@@ -3,6 +3,16 @@ export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
+            transitionProperty: {
+                'opacity': 'opacity',
+            },
+            rotate: {
+                '20': '20deg',
+            },
+            maxHeight: {
+                '112': '29rem',
+                '128': '32rem',
+            },
             fontSize: {
                 32: "32px",
                 20: "20px",
