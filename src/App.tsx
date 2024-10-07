@@ -7,16 +7,16 @@ import WeddingInfo from "./components/WeddingInfo";
 import React from "react";
 import Timeline from "./components/Timeline";
 import WeddingFooter from "./components/WeddingFooter";
-import BackgroundChanger from "./components/BackgroundChanger";
+import ImageSlideParallax from "./components/ImageSlideParallax";
 
 const App: React.FC = () => {
   return (
     <>
       <Header />
       <Carousel />
+      <ImageSlideParallax />
       <Countdown />
       <WeddingInfo />
-      <BackgroundChanger />
       <Timeline />
       <GoogleMapComponent />
       <WeddingFooter />

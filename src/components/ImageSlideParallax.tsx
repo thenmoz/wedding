@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import WeddingDummy1 from "../assets/images/wedding-dummy1.jpg";
 import WeddingDummy2 from "../assets/images/wedding-dummy2.jpg";
+import WeddingCarousel from "../assets/images/wedding-carousel.png";
 
-const images = [WeddingDummy1, WeddingDummy2];
 
-const BackgroundChanger: React.FC = () => {
+const images = [WeddingCarousel, WeddingDummy1, WeddingDummy2];
+
+const ImageSlideParallax: React.FC = () => {
   const [bgImage, setBgImage] = useState<string>(images[0]);
 //   const [scrollY, setScrollY] = useState<number>(0);
 
@@ -31,7 +33,7 @@ const BackgroundChanger: React.FC = () => {
 
   return (
     <div
-      className="h-screen w-screen bg-cover bg-center transition-opacity duration-1000 max-h-96"
+      className="h-screen w-screen bg-cover bg-center transition-opacity duration-1000 max-h-112"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundAttachment: "fixed",
@@ -46,4 +48,4 @@ const BackgroundChanger: React.FC = () => {
   );
 };
 
-export default BackgroundChanger;
+export default ImageSlideParallax;

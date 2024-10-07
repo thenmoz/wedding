@@ -10,6 +10,7 @@ export default {
                 '20': '20deg',
             },
             maxHeight: {
+                '112': '29rem',
                 '128': '32rem',
             },
             fontSize: {

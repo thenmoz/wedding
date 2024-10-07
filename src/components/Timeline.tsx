@@ -17,18 +17,18 @@ const Timeline: React.FC = () => {
     ];
 
     return (
-        <div className="w-full mx-auto bg-[#6C4E31] relative sm:h-screen sm:max-h-128">
+        <div className="w-full mx-auto bg-[#6C4E31] relative sm:h-screen sm:max-h-96">
             <div className="absolute bottom-0 left-0">
-                <img src={FlowerLeft} className="max-h-24 opacity-35" />
+                <img src={FlowerLeft} className="max-h-24 opacity-35 sm:max-h-40" />
             </div>
             <div className="absolute bottom-0 right-0">
-                <img src={FlowerRightSt} className="max-h-24 opacity-35" />
+                <img src={FlowerRightSt} className="max-h-24 opacity-35 sm:max-h-40" />
             </div>
             <div className="absolute bottom-0 right-0">
-                <img src={FlowerRightNd} className="max-h-24" />
+                <img src={FlowerRightNd} className="max-h-24 sm:max-h-40" />
             </div>
 
-            <p className="text-[#E3CAA5] font-libreBodoni px-4 py-4 text-20 tracking-wider">
+            <p className="text-[#E3CAA5] font-libreBodoni px-4 py-4 text-20 sm:text-32 tracking-wider">
                 TIMING OF
                 <br />
                 <span className="inline-block ml-16">THE DAY</span>
@@ -40,18 +40,18 @@ const Timeline: React.FC = () => {
                         className="flex w-full justify-center mb-4"
                         key={index}
                     >
-                        <div className="w-1/3 text-right pr-4">
-                            <p className="text-[#E3CAA5] font-libreCaslon text-14">
+                        <div className="w-full text-right">
+                            <p className="text-[#E3CAA5] font-libreCaslon text-14 sm:text-2xl pr-8">
                                 {event.time}
                             </p>
                         </div>
 
-                        <div className="w-8 flex justify-center items-center">
+                        <div className="w-20 flex justify-center items-center pr-8">
                             <div className="border-t border-[#E3CAA5] w-full"></div>
                         </div>
 
-                        <div className="w-1/2 pl-4">
-                            <p className="text-[#E3CAA5] font-libreCaslon font-extralight text-14">
+                        <div className="w-full">
+                            <p className="text-[#E3CAA5] font-libreCaslon font-extralight text-14 sm:text-2xl">
                                 {event.label}
                             </p>
                         </div>
