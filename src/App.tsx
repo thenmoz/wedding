@@ -14,10 +14,10 @@ const App: React.FC = () => {
     <>
       <Header />
       <Carousel />
-      <ImageSlideParallax />
       <Countdown />
       <WeddingInfo />
       <Timeline />
+      <ImageSlideParallax />
       <GoogleMapComponent />
       <WeddingFooter />
     </>
