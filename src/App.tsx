@@ -7,7 +7,7 @@ import WeddingInfo from "./components/WeddingInfo";
 import React from "react";
 import Timeline from "./components/Timeline";
 import WeddingFooter from "./components/WeddingFooter";
-import ImageSlideParallax from "./components/ImageSlideParallax";
+import ParallaxImage from "./components/ParallaxImage";
 
 const App: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const App: React.FC = () => {
       <Countdown />
       <WeddingInfo />
       <Timeline />
-      <ImageSlideParallax />
+      <ParallaxImage />
       <GoogleMapComponent />
       <WeddingFooter />
     </>
