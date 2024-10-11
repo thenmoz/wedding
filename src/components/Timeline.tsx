@@ -17,7 +17,7 @@ const Timeline: React.FC = () => {
     ];
 
     return (
-        <div className="w-full mx-auto bg-[#6C4E31] relative sm:h-screen sm:max-h-96">
+        <div className="w-full mx-auto bg-[#6C4E31] relative sm:h-auto pb-10">
             <div className="absolute bottom-0 left-0">
                 <img src={FlowerLeft} className="max-h-24 opacity-35 sm:max-h-40" />
             </div>

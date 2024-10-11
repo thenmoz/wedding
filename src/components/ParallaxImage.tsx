@@ -25,7 +25,7 @@ const ParallaxImage: React.FC = () => {
   return (
     <ParallaxProvider>
       <div className="h-auto max-h-96 flex justify-center items-center bg-gray-100 overflow-hidden relative">
-        <Parallax speed={-25}>
+        <Parallax speed={-40}>
           <div className="w-full h-full flex justify-center items-center overflow-hidden relative">
             <img
               src={images[currentImageIndex]} // Set current image
