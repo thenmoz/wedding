@@ -28,6 +28,9 @@ export default {
                 lustria: ['"Lustria"', "Kanit"],
                 libreBodoni: ['"Libre Bodoni"', "Kanit"],
             },
+            height: {
+                '1/10': '10%',
+            }
         },
     },
     plugins: [],
