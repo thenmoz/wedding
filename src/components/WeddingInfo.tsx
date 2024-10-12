@@ -18,17 +18,17 @@ const WeddingInfo: React.FC = () => {
             </div>
 
             {/* Right Side - Text and Images Section */}
-            <div className="w-full p-10 relative mr-1">
-                <div className="absolute top-0 left-0 scale-x-[-1]">
+            <div className="w-full p-10 relative">
+                <div className="absolute top-0 left-2 sm:left-12 lg:left-20 scale-x-[-1]">
                     <img src={Flower} className="w-12" />
                 </div>
-                <div className="absolute top-0 right-0">
+                <div className="absolute top-0 right-2 sm:right-12 lg:right-20">
                     <img src={Flower} className="w-12" />
                 </div>
-                <div className="absolute bottom-0 left-0 rotate-180">
+                <div className="absolute bottom-0 left-2 sm:left-12 lg:left-20 rotate-180">
                     <img src={Flower} className="w-12" />
                 </div>
-                <div className="absolute bottom-0 right-0 scale-x-[-1] rotate-180">
+                <div className="absolute bottom-0 right-2 sm:right-12 lg:right-20 scale-x-[-1] rotate-180">
                     <img src={Flower} className="w-12" />
                 </div>
                 {/* Top Section with Date, Venue, and Time */}

@@ -31,7 +31,7 @@ const ImageStackRotator: React.FC<ImageStackRotatorProps> = ({ images }) => {
           key={index}
           src={image}
           alt={`Image ${index + 1}`}
-          className={`absolute transition-opacity duration-500 ease-in-out max-h-56 sm:max-h-72 md:max-h-80
+          className={`absolute transition-opacity duration-500 ease-in-out max-h-64 sm:max-h-72 md:max-h-80
             ${index <= currentImageIndex ? 'opacity-100' : 'opacity-0'} 
             ${getRotation(index)} transform shadow-custom-shadow`}
           style={{
