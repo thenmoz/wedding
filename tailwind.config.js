@@ -30,7 +30,10 @@ export default {
             },
             height: {
                 '1/10': '10%',
-            }
+            },
+            boxShadow: {
+                'custom-shadow': '2px 4px 4.3px 1px #00000040', // Add your custom shadow here
+            },
         },
     },
     plugins: [],
