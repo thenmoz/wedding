@@ -1,16 +1,20 @@
 import React from "react";
-import WeddingInfo1 from "../assets/images/wedding-info-1.png";
+
 import Flower from "../assets/images/wedding-info-flower.png";
+import ImageRotator from "./ImageStackRotator";
+import IMG_0033 from "../assets/images/IMG_0033.jpg";
+import IMG_9964 from "../assets/images/IMG_9964.jpg";
+import IMG_9991 from "../assets/images/IMG_9991.jpg";
+import IMG_0182 from "../assets/images/IMG_0182.jpg";
+import IMG_9661 from "../assets/images/IMG_9661.jpg";
 
 const WeddingInfo: React.FC = () => {
+    const images = [IMG_0033, IMG_9964, IMG_9991, IMG_0182, IMG_9661];
+
     return (
         <div className="bg-[#E3CAA5] flex items-center justify-center py-4 ">
             <div className="w-full mx-1 flex justify-center">
-                <img
-                    src={WeddingInfo1}
-                    alt="Wedding Couple"
-                    className="h-auto object-cover max-h-[450px]"
-                />
+                <ImageRotator images={images} />
             </div>
 
             {/* Right Side - Text and Images Section */}
