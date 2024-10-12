@@ -5,7 +5,7 @@ const WeddingFooter: React.FC = () => {
   return (
     <div className="w-full bg-[#E3CAA5] py-8">
       <div className="w-full flex justify-center">
-        <img src={IMG_9679} className="h-auto max-h-64"/>
+        <img src={IMG_9679} className="h-auto max-h-64 border-solid border-2 border-black"/>
       </div>
       <div className="text-center pt-8">
         <p className="font-monteCarlo text-24 text-[#6C4E31]">
