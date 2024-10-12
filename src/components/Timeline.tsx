@@ -17,18 +17,18 @@ const Timeline: React.FC = () => {
     ];
 
     return (
-        <div className="w-full mx-auto bg-[#6C4E31] relative sm:h-auto pb-10">
-            <div className="absolute bottom-0 left-0">
-                <img src={FlowerLeft} className="max-h-24 opacity-35 sm:max-h-40" />
+        <div className="w-full mx-auto bg-[#6C4E31] relative sm:h-auto py-10">
+            <div className="absolute -bottom-1 -left-4">
+                <img src={FlowerLeft} className="max-h-24 sm:max-h-40 opacity-35 rotate-20" />
             </div>
             <div className="absolute bottom-0 right-0">
-                <img src={FlowerRightSt} className="max-h-24 opacity-35 sm:max-h-40" />
+                <img src={FlowerRightSt} className="max-h-20 sm:max-h-36 opacity-35" />
             </div>
             <div className="absolute bottom-0 right-0">
-                <img src={FlowerRightNd} className="max-h-24 sm:max-h-40" />
+                <img src={FlowerRightNd} className="max-h-20 sm:max-h-36" />
             </div>
 
-            <p className="text-[#E3CAA5] font-libreBodoni px-4 py-4 text-20 sm:text-32 tracking-wider">
+            <p className="text-[#E3CAA5] font-libreBodoni pl-4 sm:pl-8 md:pl-24 lg:pl-40 pb-4 text-20 sm:text-32 tracking-wider">
                 TIMING OF
                 <br />
                 <span className="inline-block ml-16">THE DAY</span>
@@ -40,17 +40,17 @@ const Timeline: React.FC = () => {
                         className="flex w-full justify-center mb-4"
                         key={index}
                     >
-                        <div className="w-full text-right">
-                            <p className="text-[#E3CAA5] font-libreCaslon text-14 sm:text-2xl pr-8">
+                        <div className="w-1/3 text-right">
+                            <p className="text-[#E3CAA5] font-libreCaslon text-14 sm:text-2xl">
                                 {event.time}
                             </p>
                         </div>
 
-                        <div className="w-20 flex justify-center items-center pr-8">
+                        <div className="w-20 flex justify-center items-center px-8">
                             <div className="border-t border-[#E3CAA5] w-full"></div>
                         </div>
 
-                        <div className="w-full">
+                        <div className="w-1/2">
                             <p className="text-[#E3CAA5] font-libreCaslon font-extralight text-14 sm:text-2xl">
                                 {event.label}
                             </p>
