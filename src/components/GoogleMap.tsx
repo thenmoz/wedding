@@ -23,9 +23,9 @@ const GoogleMapComponent: React.FC = () => {
   return (
     <div className="w-full mx-auto bg-[#E3CAA5] py-8">
         <div className="flex justify-center items-center mb-10 relative">
-            <p className="font-libreCaslon font-semibold text-16 text-[#6C4E31] relative">
-            Location
-            <span className="absolute bottom-0 left-0 w-[120%] h-[1px] bg-[#6C4E31]"></span>
+            <p className="font-libreCaslon font-semibold text-20 text-[#6C4E31] relative">
+            LOCATION
+            <span className="absolute bottom-0 left-2 w-[110%] h-[1px] bg-[#6C4E31]"></span>
             </p>
             <img src={FlowerRightNd} className="max-h-8 -rotate-20" />
         </div>
@@ -47,6 +47,7 @@ const GoogleMapComponent: React.FC = () => {
             </LoadScript>
             </div>
         </div>
+
     </div>
 
   );

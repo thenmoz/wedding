@@ -29,6 +29,8 @@ export default {
                 libreCaslon: ['"Libre Caslon Display"', "Kanit"],
                 lustria: ['"Lustria"', "Kanit"],
                 libreBodoni: ['"Libre Bodoni"', "Kanit"],
+                monteCarlo: ['"MonteCarlo"', "Kanit"],
+
             },
             height: {
                 '1/10': '10%',

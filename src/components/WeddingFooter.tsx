@@ -1,13 +1,17 @@
 import React from "react";
+import IMG_9679 from "../assets/images/IMG_9679.jpg"
 
 const WeddingFooter: React.FC = () => {
   return (
     <div className="w-full bg-[#E3CAA5] py-8">
-      <div className="text-center">
-        <p className="font-libreCaslon text-lg text-[#6C4E31]">
+      <div className="w-full flex justify-center">
+        <img src={IMG_9679} className="h-auto max-h-64"/>
+      </div>
+      <div className="text-center pt-8">
+        <p className="font-monteCarlo text-24 text-[#6C4E31]">
           Thank you for being part of our special day.
         </p>
-        <p className="font-libreCaslon text-lg text-[#6C4E31]">
+        <p className="font-monteCarlo text-24 text-[#6C4E31]">
           We can't wait to celebrate with you.
         </p>
       </div>

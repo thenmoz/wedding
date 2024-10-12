@@ -25,14 +25,14 @@ const ParallaxImage: React.FC = () => {
 
   return (
     <ParallaxProvider>
-      <div className="h-auto max-h-72 flex justify-center items-center bg-gray-100 overflow-hidden relative">
+      <div className="h-auto max-h-72 sm:max-h-96 flex justify-center items-center bg-gray-100 overflow-hidden relative">
         {/* Check if the current image is IMG_9979 and render without Parallax */}
         {images[currentImageIndex] === IMG_9979 ? (
           <div className="w-full h-full flex justify-center items-center overflow-hidden relative">
             <img
               src={IMG_9979}
               alt="Non-parallax Image"
-              className="w-full h-screen max-h-72 object-cover" // Maintain image size and aspect ratio
+              className="w-full h-screen max-h-72 sm:max-h-96 object-cover" // Maintain image size and aspect ratio
             />
           </div>
         ) : (
