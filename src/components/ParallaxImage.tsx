@@ -58,7 +58,7 @@ const ParallaxImage: React.FC = () => {
                 alt="Parallax Image"
                 onLoad={handleImageLoad}
                 loading="lazy"
-                className="h-screen sm:max-h-96 object-cover transition-none"
+                className="w-screen h-screen object-cover transition-none"
               />
             </div>
           </Parallax>
