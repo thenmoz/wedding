@@ -48,17 +48,19 @@ const ParallaxImage: React.FC = () => {
               onLoad={handleImageLoad}
               loading="lazy" // Lazy load for better performance
               className="w-full h-screen max-h-72 sm:max-h-96 object-cover transition-none"
+              style={{ willChange: 'transform' }} // Optimize rendering
             />
           </div>
         ) : (
-          <Parallax speed={-40}>
+          <Parallax speed={-40}> {/* Adjust speed for smoother effect */}
             <div className="w-screen h-screen flex justify-center items-center overflow-hidden relative">
               <img
                 src={images[currentImageIndex]}
                 alt="Parallax Image"
                 onLoad={handleImageLoad}
                 loading="lazy"
-                className="w-screen h-screen object-cover transition-none"
+                className="w-screen h-screen object-cover transition-transform duration-700 ease-in-out"
+                style={{ willChange: 'transform' }} // Optimize rendering
               />
             </div>
           </Parallax>
