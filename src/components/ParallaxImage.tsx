@@ -39,7 +39,7 @@ const ParallaxImage: React.FC = () => {
             />
           </div>
         ) : (
-          <Parallax speed={-70}> {/* Adjust speed for smoother effect */}
+          <Parallax speed={-15}> {/* Adjust speed for smoother effect */}
             <div className="w-screen h-screen flex justify-center items-center overflow-hidden relative">
               <img
                 src={images[currentImageIndex]}
