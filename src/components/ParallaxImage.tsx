@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
+import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import IMG_0160 from "../assets/images/IMG_0160.jpg";
 import IMG_0157 from "../assets/images/IMG_0157.jpg";
 import IMG_9979 from "../assets/images/IMG_9979.jpg";
@@ -51,16 +51,17 @@ const ParallaxImage: React.FC = () => {
             />
           </div>
         ) : (
-          <ParallaxBanner
-            layers={[
-              {
-                image: images[currentImageIndex],
-                speed: -20,
-              },
-            ]}
-            className="w-full h-screen object-cover transition-none"
-            onLoad={handleImageLoad} // Handle loading state
-          />
+          <Parallax speed={-40}>
+            <div className="w-screen h-screen flex justify-center items-center overflow-hidden relative">
+              <img
+                src={images[currentImageIndex]}
+                alt="Parallax Image"
+                onLoad={handleImageLoad}
+                loading="lazy"
+                className="h-screen sm:max-h-96 object-cover transition-none"
+              />
+            </div>
+          </Parallax>
         )}
       </div>
     </ParallaxProvider>
