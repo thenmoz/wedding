@@ -7,7 +7,7 @@ import IMG_9979 from "../assets/images/IMG_9979.jpg";
 const ParallaxImage: React.FC = () => {
   const images = [IMG_0160, IMG_0157, IMG_9979];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
+  const [setIsLoading] = useState(true);
 
   useEffect(() => {
     // Preload all images to improve performance
