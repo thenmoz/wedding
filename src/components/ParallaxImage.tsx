@@ -7,7 +7,7 @@ import IMG_9979 from "../assets/images/IMG_9979.jpg";
 const ParallaxImage: React.FC = () => {
   const images = [IMG_0160, IMG_0157, IMG_9979];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Preload all images to improve performance
@@ -35,15 +35,19 @@ const ParallaxImage: React.FC = () => {
   return (
     <ParallaxProvider>
       <div className="h-auto max-h-72 sm:max-h-96 flex justify-center items-center bg-gray-100 overflow-hidden relative">
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-300">
+            Loading...
+          </div>
+        )}
         {images[currentImageIndex] === IMG_9979 ? (
           <div className="w-full h-full flex justify-center items-center overflow-hidden relative">
-            {/* Lazy loading and optimized size */}
             <img
               src={IMG_9979}
               alt="Non-parallax Image"
               onLoad={handleImageLoad}
               loading="lazy" // Lazy load for better performance
-              className={`w-full h-screen max-h-72 sm:max-h-96 object-cover transition-none`} 
+              className="w-full h-screen max-h-72 sm:max-h-96 object-cover transition-none"
             />
           </div>
         ) : (
@@ -54,8 +58,8 @@ const ParallaxImage: React.FC = () => {
                 speed: -20,
               },
             ]}
-            className={`w-full h-screen object-cover transition-none`}
-            // Apply lazy loading and responsive sizing here too
+            className="w-full h-screen object-cover transition-none"
+            onLoad={handleImageLoad} // Handle loading state
           />
         )}
       </div>
